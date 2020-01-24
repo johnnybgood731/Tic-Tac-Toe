@@ -3,6 +3,7 @@
 # programming a brute force algorithm.  One improvement I would like to make is to have the computer
 # identify whether a move forces a cat's game and avoid doing so when possible.
 
+
 # The board indexes in a spiral in case I ever want to check for rotational symmetry
 def printBoard(board):
     print("")
@@ -17,21 +18,21 @@ def printBoard(board):
 
 
 def checkWin(board):
-    if board[0] == board[1] and board[0] == board[2]:
+    if board[0] == board[1] == board[2]:
         return board[0]
-    if board[7] == board[8] and board[7] == board[3]:
+    if board[7] == board[8] == board[3]:
         return board[7]
-    if board[6] == board[5] and board[6] == board[4]:
+    if board[6] == board[5] == board[4]:
         return board[6]
-    if board[0] == board[7] and board[0] == board[6]:
+    if board[0] == board[7] == board[6]:
         return board[0]
-    if board[1] == board[8] and board[1] == board[5]:
+    if board[1] == board[8] == board[5]:
         return board[1]
-    if board[2] == board[3] and board[2] == board[4]:
+    if board[2] == board[3] == board[4]:
         return board[2]
-    if board[0] == board[8] and board[0] == board[4]:
+    if board[0] == board[8] == board[4]:
         return board[0]
-    if board[6] == board[8] and board[6] == board[2]:
+    if board[6] == board[8] == board[2]:
         return board[6]
     for x in range(9):
         if board[x] != "X" and board[x] != "O":
